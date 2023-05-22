@@ -1,0 +1,77 @@
+package island;
+
+import island.Cell;
+import island.Herbivore;
+
+import java.util.HashMap;
+
+public class Horse extends Herbivore {
+    public final static String NAME = "horse";
+    public final static String emoji = "\uD83D\uDC34";
+    public final static int WEIGHT = 400;
+    public final static int MAX_TRAVEL_SPEED = 4;
+    public static final HashMap<String, Integer> PROBABILITY = new HashMap<>();
+
+    static {
+        PROBABILITY.put("Plant", 100);
+    }
+
+    private double hp;
+
+    public Horse(double hp) {
+        this.hp = hp;
+    }
+
+    @Override
+    public void relocate(Cell cell) {
+        super.relocate(cell);
+    }
+
+    @Override
+    public void reproduce(Cell cell) {
+        super.reproduce(cell);
+    }
+
+    @Override
+    public void eat(Cell cell) {
+        super.eat(cell);
+    }
+
+    @Override
+    public int getMaxTravelSpeed() {
+        return MAX_TRAVEL_SPEED;
+    }
+
+    @Override
+    public double getHp() {
+        return hp;
+    }
+
+    @Override
+    public void setHp(double hp) {
+        this.hp = hp;
+    }
+
+    @Override
+    public HashMap<String, Integer> getProbabilityMap() {
+        return PROBABILITY;
+    }
+
+
+    @Override
+    public String getEmoji() {
+        return emoji;
+    }
+
+    @Override
+    public double getWeight() {
+        return WEIGHT;
+    }
+
+    @Override
+    public String toString() {
+        return "Horse{" +
+                "hp=" + hp +
+                '}';
+    }
+}
