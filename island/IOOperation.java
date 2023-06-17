@@ -1,13 +1,12 @@
 package island;
-
 import java.util.Scanner;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class IOOperation {
     public static Scanner scanner = new Scanner(System.in);
-    private static final ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
-    static final AtomicBoolean continueExecution = new AtomicBoolean(true);
+    private static final ScheduledExecutorService SCHEDULED_EXECUTOR_SERVICE = Executors.newScheduledThreadPool(1);
+    public static final AtomicBoolean CONTINUE_EXECUTION = new AtomicBoolean(true);
 
     public static int enterFromConsole(String message) {
         int number;
@@ -24,7 +23,7 @@ public class IOOperation {
     }
 
     public static void allTasks() {
-        if (continueExecution.get()) {
+        if (CONTINUE_EXECUTION.get()) {
             Island.selectAction();
             Plant.grow();
             Island.printMatrix();
@@ -32,13 +31,13 @@ public class IOOperation {
     }
 
     public static void scheduleTasks() {
-        ScheduledFuture<?> stopHandle = scheduledExecutorService.scheduleAtFixedRate(island.IOOperation::allTasks, 1, 1, TimeUnit.SECONDS);
+        ScheduledFuture<?> stopHandle = SCHEDULED_EXECUTOR_SERVICE.scheduleAtFixedRate(island.IOOperation::allTasks, 1, 1, TimeUnit.SECONDS);
         Runnable canceller = () -> {
             stopHandle.cancel(true);
-            scheduledExecutorService.shutdown();
+            SCHEDULED_EXECUTOR_SERVICE.shutdown();
         };
         try {
-            scheduledExecutorService.schedule(canceller, 15, TimeUnit.SECONDS).get();
+            SCHEDULED_EXECUTOR_SERVICE.schedule(canceller, 15, TimeUnit.SECONDS).get();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }

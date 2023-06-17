@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Duck extends Omnivore {
     public final static String NAME = "duck";
-    public final static String emoji = "\uD83E\uDD86";
+    public final static String EMOJI = "\uD83E\uDD86";
     public final static int WEIGHT = 1;
     public final static int MAX_TRAVEL_SPEED = 4;
     public static final HashMap<String, Integer> PROBABILITY = new HashMap<>();
@@ -49,7 +49,7 @@ public class Duck extends Omnivore {
 
     @Override
     public String getEmoji() {
-        return emoji;
+        return EMOJI;
     }
 
     @Override

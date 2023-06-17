@@ -1,7 +1,5 @@
 package island;
 
-import island.*;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;

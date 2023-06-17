@@ -4,11 +4,11 @@ import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Island {
-    public static final String lengthQuestion = "Set the length of the island";
-    public static final String widthQuestion = "Set the width of the island";
+    public static final String LENGTH_QUESTION = "Set the length of the island";
+    public static final String WIDTH_QUESTION = "Set the width of the island";
 
-    private static final int LENGTH = IOOperation.enterFromConsole(lengthQuestion);
-    private static final int WIDTH = IOOperation.enterFromConsole(widthQuestion);
+    private static final int LENGTH = IOOperation.enterFromConsole(LENGTH_QUESTION);
+    private static final int WIDTH = IOOperation.enterFromConsole(WIDTH_QUESTION);
 
     private static final Cell[][] MATRIX = new Cell[LENGTH][WIDTH];
 

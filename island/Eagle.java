@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class Eagle extends Predator {
     public final static String NAME = "eagle";
-    public final static String emoji = "\uD83E\uDD85";
+    public final static String EMOJI = "\uD83E\uDD85";
     public final static int WEIGHT = 6;
     public final static int MAX_TRAVEL_SPEED = 3;
     public static final HashMap<String, Integer> PROBABILITY = new HashMap<>();
@@ -61,7 +61,7 @@ public class Eagle extends Predator {
 
     @Override
     public String getEmoji() {
-        return emoji;
+        return EMOJI;
     }
 
     @Override

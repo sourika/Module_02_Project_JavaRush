@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Plant extends Creature {
-    public final static String emoji = "\uD83C\uDF31";
+    public final static String EMOJI = "\uD83C\uDF31";
     public final static String NAME = "plant";
     public final static int WEIGHT = 1;
 
@@ -26,7 +26,7 @@ public class Plant extends Creature {
 
     @Override
     public String getEmoji() {
-        return emoji;
+        return EMOJI;
     }
 
     @Override

@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Boar extends Omnivore {
     public final static String NAME = "boar";
-    public final static String emoji = "\uD83D\uDC17";
+    public final static String EMOJI = "\uD83D\uDC17";
     public final static int WEIGHT = 400;
     public final static int MAX_TRAVEL_SPEED = 2;
     public static final HashMap<String, Integer> PROBABILITY = new HashMap<>();
@@ -48,7 +48,7 @@ public class Boar extends Omnivore {
 
     @Override
     public String getEmoji() {
-        return emoji;
+        return EMOJI;
     }
 
     @Override

@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Buffalo extends Herbivore {
     public final static String NAME = "buffalo";
-    public final static String emoji = "\uD83D\uDC03";
+    public final static String EMOJI = "\uD83D\uDC03";
     public final static int WEIGHT = 700;
     public final static int MAX_TRAVEL_SPEED = 3;
     public static final HashMap<String, Integer> PROBABILITY = new HashMap<>();
@@ -57,7 +57,7 @@ public class Buffalo extends Herbivore {
 
     @Override
     public String getEmoji() {
-        return emoji;
+        return EMOJI;
     }
 
     @Override

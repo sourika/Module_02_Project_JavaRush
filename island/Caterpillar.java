@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Caterpillar extends Herbivore {
     public final static String NAME = "caterpillar";
-    public final static String emoji = "\uD83D\uDC1B";
+    public final static String EMOJI = "\uD83D\uDC1B";
     public final static double WEIGHT = 0.01;
     public final static int MAX_TRAVEL_SPEED = 0;
     public static final HashMap<String, Integer> PROBABILITY = new HashMap<>();
@@ -69,7 +69,7 @@ public class Caterpillar extends Herbivore {
 
     @Override
     public String getEmoji() {
-        return emoji;
+        return EMOJI;
     }
 
     @Override
